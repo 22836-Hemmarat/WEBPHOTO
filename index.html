@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Thailand - แกลลอรี่สถานที่ท่องเที่ยว</title>
+    
+    <!-- นำเข้าฟอนต์ภาษาไทยจาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* ส่วนหัวเว็บไซต์ (Header) */
+        header {
+            background-color: #004d98; /* สีน้ำเงินสไตล์เอกลักษณ์ไทย */
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* คอนเทนเนอร์หลัก */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ระบบ Grid สำหรับแกลลอรี่ */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding-bottom: 60px;
+        }
+
+        /* การ์ดรูปภาพแต่ละใบ */
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ส่วนของรูปภาพ */
+        .gallery-img-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-color: #e9ecef; /* สีพื้นหลังชั่วคราวก่อนโหลดรูป */
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1); /* ขยายรูปนิดนึงเมื่อเอาเมาส์ชี้ */
+        }
+
+        /* ส่วนของข้อความอธิบาย */
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #004d98;
+            margin-bottom: 8px;
+        }
+
+        .gallery-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ส่วนท้ายเว็บไซต์ (Footer) */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>มหัศจรรย์เมืองไทย</h1>
+        <p>รวบรวมภาพความประทับใจจากสถานที่ท่องเที่ยวทั่วประเทศไทย</p>
+    </header>
+
+    <div class="container">
+        <div class="gallery-grid">
+
+            <!-- รูปภาพที่ 1 -->
+            <div class="gallery-item">
+                <div class="gallery-img-container">
+                    <!-- ใส่ URL หรือชื่อไฟล์รูปของคุณตรง src="..." ด้านล่างนี้ -->
+                    <img src="https://image-tc.galaxy.tf/wijpeg-sxrfid5inslt46adwg0pwpho/intanon.jpg" alt="เชียงใหม่" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3 class="gallery-title">ดอยอินทนนท์, เชียงใหม่</h3>
+                    <p class="gallery-desc">จุดสูงสุดแดนสยาม สัมผัสอากาศหนาวเย็นและธรรมชาติที่อุดมสมบูรณ์ตลอดทั้งปี</p>
+                </div>
+            </div>
+
+            <!-- รูปภาพที่ 2 -->
+            <div class="gallery-item">
+                <div class="gallery-img-container">
+                    <!-- ใส่ URL หรือชื่อไฟล์รูปของคุณตรง src="..." ด้านล่างนี้ -->
+                    <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/62/2024/09/24083816/temple-in-bangkok.jpg" alt="กรุงเทพมหานคร" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3 class="gallery-title">วัดอรุณราชวราราม, กรุงเทพฯ</h3>
+                    <p class="gallery-desc">สถาปัตยกรรมริมแม่น้ำเจ้าพระยาที่งดงามตระการตาและเป็นเอกลักษณ์ของไทย</p>
+                </div>
+            </div>
+
+            <!-- รูปภาพที่ 3 -->
+            <div class="gallery-item">
+                <div class="gallery-img-container">
+                    <!-- ใส่ URL หรือชื่อไฟล์รูปของคุณตรง src="..." ด้านล่างนี้ -->
+                    <img src="https://www.pullmanphuketarcadia.com/wp-content/uploads/sites/65/2020/01/Phi-Phi-Island-3.jpg" alt="ภูเก็ต" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3 class="gallery-title">เกาะพีพี, ภูเก็ต-กระบี่</h3>
+                    <p class="gallery-desc">สวรรค์แห่งทะเลอันดามัน น้ำทะเลใสสะอาดและหาดทรายขาวละเอียด</p>
+                </div>
+            </div>
+
+            <!-- รูปภาพที่ 4 -->
+            <div class="gallery-item">
+                <div class="gallery-img-container">
+                    <!-- ใส่ URL หรือชื่อไฟล์รูปของคุณตรง src="..." ด้านล่างนี้ -->
+                    <img src="https://img.kapook.com/u/natthida/travel/60713170.jpg" alt="อยุธยา" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3 class="gallery-title">อุทยานประวัติศาสตร์, อยุธยา</h3>
+                    <p class="gallery-desc">ย้อนรอยอดีตราชธานีเก่า ชมความงามของโบราณสถานมรดกโลก</p>
+                </div>
+            </div>
+
+            <!-- รูปภาพที่ 5 -->
+            <div class="gallery-item">
+                <div class="gallery-img-container">
+                    <!-- ใส่ URL หรือชื่อไฟล์รูปของคุณตรง src="..." ด้านล่างนี้ -->
+                    <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/236/2024/06/17031656/Khao-Sok-National-Park-1.jpg" alt="สุราษฎร์ธานี" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3 class="gallery-title">เขาสก, สุราษฎร์ธานี</h3>
+                    <p class="gallery-desc">กุ้ยหลินเมืองไทย ภูเขาหินปูนสูงตระหง่านกลางเขื่อนรัชชประภา</p>
+                </div>
+            </div>
+
+            <!-- รูปภาพที่ 6 -->
+            <div class="gallery-item">
+                <div class="gallery-img-container">
+                    <!-- ใส่ URL หรือชื่อไฟล์รูปของคุณตรง src="..." ด้านล่างนี้ -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1FvF9Pb0r2d_e7B-ur5ElaTunhx8SycgYcsc6YguYr4g_UiWhP1PpA8JW&s=10" alt="ชลบุรี" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3 class="gallery-title">เกาะล้าน, ชลบุรี</h3>
+                    <p class="gallery-desc">สถานที่พักผ่อนใกล้กรุง น้ำใส ทะเลสวย เดินทางสะดวก</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Thailand Tourism Gallery. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
